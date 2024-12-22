@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mehrdad Yadollahi</title>
+  <title>Your Name</title>
   <style>
     body {
       margin: 0;
@@ -11,7 +11,7 @@
       background: #f5f5f5;
     }
 
-    /* Simple sidebar style */
+    /* Sidebar styling */
     .sidebar {
       background: #003d2e;
       color: #ffffff;
@@ -24,12 +24,14 @@
       padding-top: 20px;
     }
 
+    /* Profile pic in the sidebar: 3cm x 4cm */
     .sidebar img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
+      width: 3cm;
+      height: 4cm;
       object-fit: cover;
+      border-radius: 4px;
       margin-bottom: 20px;
+      border: 2px solid #ffffff;
     }
 
     .sidebar a {
@@ -39,6 +41,11 @@
       font-weight: bold;
     }
 
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content area */
     .content {
       margin-left: 220px;
       padding: 30px;
@@ -46,6 +53,7 @@
       min-height: 100vh;
     }
 
+    /* Home / header area */
     .header-title {
       font-size: 2rem;
       margin-bottom: 10px;
@@ -53,24 +61,47 @@
 
     .subtitle {
       color: #555555;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
+    /* Larger content image: 8cm x 10cm */
     .profile-pic {
+      width: 8cm;
+      height: 10cm;
+      object-fit: cover;
       float: right;
       margin: 0 0 20px 20px;
       border: 2px solid #ccc;
       border-radius: 4px;
-      width: 250px;
     }
 
+    /* Optional styling for sections */
+    section {
+      margin-bottom: 40px;
+      clear: both;
+    }
+
+    section h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #003d2e;
+    }
+
+    /* Utility classes, if needed */
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   </style>
 </head>
 <body>
-  <!-- Sidebar Section -->
+  <!-- Sidebar -->
   <div class="sidebar">
-    <img src=img src="Mehrdad.jpg" />
-    <a href="#">Home</a>
+    <!-- Replace Mehrdad.jpg with your own image in the repository root -->
+    <img src="Mehrdad.jpg" alt="Sidebar Photo" />
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
@@ -80,40 +111,84 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- Main Content Section -->
+  <!-- Main Content -->
   <div class="content">
-    <h1 class="header-title">Welcome to the Webpage of Mehrdad Yadollahi, M.Sc.</h1>
-    <img class="profile-pic" src="Mehrdad.jpg" alt="Profile Picture">
-    <p class="subtitle"> Network Engineer | 5G, LTE | ML, AI | Dual M.Sc. in Computer Science & Electrical Engineering (Telecommunications).</p>
-    <p>
-      This is where you can include a brief introduction about yourself, your research interests, and other relevant information. 
-      You might talk about your current academic position, your educational background, and the kind of projects or research you work on.
-    </p>
+    
+    <!-- Home Section -->
+    <section id="home" class="clearfix">
+      <h1 class="header-title">Welcome to the Webpage of Mehrdad Yadollahi, M.Sc.</h1>
+      <!-- Larger content image: 8cm × 10cm -->
+      <img class="profile-pic" src="Mehrdad.jpg" alt="Profile Picture">
+      <p class="subtitle">Network Engineer | 5G, LTE | ML, AI | Dual M.Sc. in Computer Science & Electrical Engineering (Telecommunications).</p>
+      <p>
+        Here you can give a short introduction about yourself, your research interests, 
+        and anything else you want visitors to know right away.
+      </p>
+    </section>
 
-    <h2 id="about">About</h2>
-    <p>Write a short biography, your interests, and achievements here.</p>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Write a short biography, your interests, achievements, and 
+        other relevant personal/professional information here.
+      </p>
+    </section>
 
-    <h2 id="education">Education</h2>
-    <ul>
-      <li>Ph.D. in Computer Science, XYZ University</li>
-      <li>M.Sc. in Software Engineering, ABC University</li>
-      <li>B.Sc. in Computer Science, 123 University</li>
-    </ul>
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Ph.D. in Computer Science, XYZ University</li>
+        <li>M.Sc. in Software Engineering, ABC University</li>
+        <li>B.Sc. in Computer Science, 123 University</li>
+      </ul>
+    </section>
 
-    <h2 id="experience">Experience</h2>
-    <p>Include details about your teaching, research, and industry experience.</p>
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>
+        Provide details about your professional experience, including 
+        any teaching or industry positions you've held.
+      </p>
+    </section>
 
-    <h2 id="research">Research</h2>
-    <p>Describe your research interests, projects, and perhaps link to publications.</p>
+    <!-- Research Section -->
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        Discuss your primary research areas, publications, or ongoing projects. 
+        You can link to external resources or PDFs here.
+      </p>
+    </section>
 
-    <h2 id="teaching">Teaching</h2>
-    <p>List courses taught and perhaps summarize your teaching philosophy.</p>
+    <!-- Teaching Section -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p>
+        List courses you have taught (or are currently teaching), and your teaching philosophy or materials.
+      </p>
+    </section>
 
-    <h2 id="service">Service</h2>
-    <p>Mention professional services, committee memberships, reviews, or organizational roles.</p>
+    <!-- Service Section -->
+    <section id="service">
+      <h2>Service</h2>
+      <p>
+        Describe committee memberships, reviewer roles, professional societies, or volunteer 
+        experiences relevant to your career.
+      </p>
+    </section>
 
-    <h2 id="contact">Contact</h2>
-    <p>Provide your email or a contact form link for people to get in touch.</p>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Provide an email address or a form link so that visitors can reach out. 
+        For example: <a href="mailto:youremail@domain.com">youremail@domain.com</a>
+      </p>
+    </section>
+
   </div>
 </body>
 </html>
