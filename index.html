@@ -64,13 +64,14 @@
       margin-bottom: 20px;
     }
 
-    /* Larger content image: 8cm x 10cm */
+    /* Larger content image: 16cm x 12cm (centered in content) */
     .profile-pic {
       width: 16cm;
       height: 12cm;
       object-fit: cover;
-      float: right;
-      margin: 0 0 20px 20px;
+      /* Removed float: right; */
+      display: block;
+      margin: 0 auto 20px auto; /* centers the image and adds spacing */
       border: 2px solid #ccc;
       border-radius: 4px;
     }
@@ -99,7 +100,6 @@
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-    <!-- Replace Mehrdad.jpg with your own image in the repository root -->
     <img src="Mehrdad.jpg" alt="Sidebar Photo" />
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -117,9 +117,13 @@
     <!-- Home Section -->
     <section id="home" class="clearfix">
       <h1 class="header-title">Welcome to the Webpage of Mehrdad Yadollahi, M.Sc.</h1>
-      <!-- Larger content image: 8cm × 10cm -->
+
+      <!-- Larger content image, now displayed between heading and subtitle -->
       <img class="profile-pic" src="Mehrdad.jpg" alt="Profile Picture">
-      <p class="subtitle">Network Engineer | 5G, LTE | ML, AI | Dual M.Sc. in Computer Science & Electrical Engineering (Telecommunications).</p>
+
+      <p class="subtitle">
+        Network Engineer | 5G, LTE | ML, AI | Dual M.Sc. in Computer Science & Electrical Engineering (Telecommunications).
+      </p>
       <p>
         Here you can give a short introduction about yourself, your research interests, 
         and anything else you want visitors to know right away.
