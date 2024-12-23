@@ -285,6 +285,69 @@
 .research-section a:hover {
   text-decoration: underline;
 }
+/* Contact Section Container */
+.contact-section {
+  background-color: #f9f9f9;      /* Light background */
+  padding: 20px 30px;            /* Internal spacing */
+  border-radius: 8px;            /* Rounded corners */
+  margin-bottom: 40px;           /* Space below section */
+}
+
+/* Section Title */
+.contact-section h2 {
+  font-size: 2rem;
+  color: #003d2e;                /* Dark green color */
+  text-align: center;            /* Center the heading */
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* Optional line under heading */
+  padding-bottom: 10px;
+}
+
+/* Intro Paragraph (Optional) */
+.contact-section p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Contact List */
+.contact-list {
+  list-style: none;              /* Remove default bullets */
+  padding: 0;
+  max-width: 600px;             /* Limit width for readability */
+  margin: 0 auto;               /* Center the list in the section */
+}
+
+/* Each Contact Item */
+.contact-list li {
+  display: flex;                /* Put icon and text on one line */
+  align-items: center;
+  font-size: 1.1rem;            /* Slightly larger text */
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Icon Styling */
+.contact-list li i {
+  color: #003d2e;               /* Dark green or your preferred icon color */
+  margin-right: 10px;           /* Space between icon and text */
+  font-size: 1.3rem;            /* Increase icon size a bit */
+}
+
+/* Strong Text Emphasis (e.g., "Email:", "Phone:") */
+.contact-list li strong {
+  margin-right: 5px;
+}
+
+/* Link Styling */
+.contact-list li a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contact-list li a:hover {
+  text-decoration: underline;
+}
 
 
   </style>
@@ -454,13 +517,69 @@
 </section>
 
     
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Provide an email address or a form link so that visitors can reach out. 
-        For example: <a href="mailto:youremail@domain.com">youremail@domain.com</a>
-      </p>
-    </section>
+    <!-- Include Font Awesome in your <head> to access icons -->
+<link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+  integrity="sha512-..." 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer"
+/>
+
+<section id="contact" class="contact-section">
+  <h2>Contact</h2>
+  <p>If you’d like to get in touch, feel free to reach me through any of the channels below.</p>
+  <ul class="contact-list">
+    <!-- Email -->
+    <li>
+      <i class="fas fa-envelope"></i> 
+      <strong>Email:</strong> 
+      <a href="mailto:example@example.com">example@example.com</a>
+    </li>
+    
+    <!-- Phone -->
+    <li>
+      <i class="fas fa-phone"></i> 
+      <strong>Phone:</strong> 
+      +1 (555) 123-4567
+    </li>
+    
+    <!-- Address -->
+    <li>
+      <i class="fas fa-map-marker-alt"></i> 
+      <strong>Address:</strong> 
+      123 Tech Lane, Innovation City, US
+    </li>
+    
+    <!-- LinkedIn -->
+    <li>
+      <i class="fab fa-linkedin"></i> 
+      <strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer">
+        linkedin.com/in/your-profile
+      </a>
+    </li>
+    
+    <!-- GitHub -->
+    <li>
+      <i class="fab fa-github"></i> 
+      <strong>GitHub:</strong> 
+      <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+        github.com/your-username
+      </a>
+    </li>
+    
+    <!-- GitLab -->
+    <li>
+      <i class="fab fa-gitlab"></i> 
+      <strong>GitLab:</strong> 
+      <a href="https://gitlab.com/your-username" target="_blank" rel="noopener noreferrer">
+        gitlab.com/your-username
+      </a>
+    </li>
+  </ul>
+</section>
+
 
   </div>
 </body>
