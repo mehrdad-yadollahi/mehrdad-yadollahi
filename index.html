@@ -166,6 +166,69 @@
   color: #003d2e; /* Highlight the degree titles in dark green */
   font-weight: bold; /* Make degree titles bold */
 }
+/***** EXPERIENCE SECTION *****/
+.experience-section {
+  background-color: #f9f9f9;   /* Light background for contrast */
+  padding: 20px 30px;         /* Internal spacing */
+  border-radius: 8px;         /* Rounded corners */
+  margin-bottom: 40px;        /* Space below this section */
+}
+
+.experience-section h2 {
+  font-size: 2rem;
+  color: #003d2e;             /* Dark green for heading text */
+  text-align: center;         /* Center the heading */
+  margin-bottom: 25px;        /* Spacing below heading */
+  border-bottom: 1px solid #ddd; /* Optional subtle underline */
+  padding-bottom: 10px;       /* Space under heading for the line */
+}
+
+/* Each Job Container */
+.job {
+  margin-bottom: 30px;        /* Spacing between job entries */
+}
+
+/* Company Name / Time Span */
+.job h3 {
+  font-size: 1.3rem;
+  color: #444;                /* Medium-dark grey for the company text */
+  margin-bottom: 5px;
+  display: flex;              /* Place company and dates inline */
+  flex-wrap: wrap;            /* Wrap on smaller screens if necessary */
+  align-items: center;
+  gap: 8px;                   /* Spacing between company text and dates */
+}
+
+/* The date span next to the company name */
+.job-dates {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;         /* Different style to stand out */
+}
+
+/* Role Titles (h4) */
+.job h4 {
+  font-size: 1.2rem;
+  margin: 10px 0 8px 0;
+  color: #003d2e;             /* Same green as main heading for consistency */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* UL for responsibilities/achievements */
+.job ul {
+  margin-left: 20px;          /* Indent bullet list */
+  margin-bottom: 10px;
+}
+
+.job ul li {
+  margin-bottom: 10px;        /* Space between bullet points */
+  line-height: 1.6;           /* Improve readability */
+  font-size: 1rem;           
+  color: #333;
+}
 
 
   </style>
@@ -244,13 +307,55 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>
-        Provide details about your professional experience, including 
-        any teaching or industry positions you've held.
-      </p>
-    </section>
+   <section id="experience" class="experience-section">
+  <h2>Experience</h2>
+  
+  <!-- Job 1: Bowling Green State University -->
+  <div class="job">
+    <h3>
+      Bowling Green State University, Ohio 
+      <span class="job-dates">Jul. 2024 - Dec. 2024</span>
+    </h3>
+    <h4>Graduate Teaching Assistant in the School of Engineering and Department of Computer Science</h4>
+    <ul>
+      <li>Mentored students in electrical and computer engineering fundamentals through hands-on labs.</li>
+      <li>Researched advancements in LLMs, Deep Learning Transformers, and Generative AI applications.</li>
+    </ul>
+  </div>
+
+  <!-- Job 2: MCI -->
+  <div class="job">
+    <h3>
+      MCI (Major cellular network operator supporting 105 million subscribers)
+      <span class="job-dates">Nov. 2007 - Aug. 2023</span>
+    </h3>
+
+    <!-- Role: Senior Network Engineer -->
+    <h4>
+      Senior Network Engineer 
+      <span class="job-dates">Apr. 2010 - Aug. 2023</span>
+    </h4>
+    <ul>
+      <li>Directed end-to-end operations for nationwide networks spanning 2G to 5G technologies, ensuring high standards in quality assurance and providing robust support to Optimization, Performance, Planning, and NOC teams, along with expert troubleshooting and fault management nationwide.</li>
+      <li>Managed vendor relationships and oversaw the hardware/software lifecycle, including compatibility, licensing, and End-of-Support management across 5G, LTE, UMTS, and GSM networks, maintaining adherence to SLAs.</li>
+      <li>Executed comprehensive hardware and software upgrades across Nokia and Ericsson nodes, enhancing network reliability and achieving $3M in cost savings.</li>
+      <li>Led commissioning, integration, and rehoming of Nokia and Ericsson gNB, eNB, and RNC nodes across packet cores, configuring Cisco, Juniper, and Ethernet switches, achieving $0.7M in savings and ensuring seamless IP backbone connectivity.</li>
+      <li>Optimized network performance using machine learning and database management, enhancing customer satisfaction.</li>
+    </ul>
+
+    <!-- Role: Radio Access Network (RAN) Engineer -->
+    <h4>
+      Radio Access Network (RAN) Engineer 
+      <span class="job-dates">Nov. 2007 - Apr. 2010</span>
+    </h4>
+    <ul>
+      <li>Boosted network performance and capacity by executing comprehensive parameter audits and optimizing RF parameters across multiple technologies, aligning configurations with industry standards to maximize overall efficiency.</li>
+      <li>Enhanced network quality and minimized downtime by resolving radio access issues, optimizing neighbor definitions, and planning frequency refarming.</li>
+      <li>Achieved $0.5M in cost savings through effective troubleshooting and upgrades of Nokia BSC2i, BSC3i, Flexi BSC, and BTS nodes, including implementing advanced Ethernet switch configurations.</li>
+    </ul>
+  </div>
+</section>
+
 
     <!-- Research Section -->
     <section id="research">
