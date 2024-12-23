@@ -2,73 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Responsive Meta Tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Mehrdad Yadollahi</title>
   <style>
+    /* Reset some default margins and paddings */
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f5f5f5;
     }
 
-.sidebar {
+    /* SIDEBAR */
+    .sidebar {
       background: #003d2e;
       color: #ffffff;
-      width: 220px;
+      width: 220px;          /* Fixed width on larger screens */
       height: 100vh;
       position: fixed;
+      top: 0;
+      left: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-top: 20px;
+      overflow-y: auto;      /* If content is taller than 100vh, enable scrolling */
     }
 
     .sidebar img {
-      width: 3cm;
-      height: 4cm;
+      /* Replaced cm with responsive width/height */
+      width: 80%;
+      height: auto;
       object-fit: cover;
       border-radius: 4px;
       margin-bottom: 20px;
       border: 2px solid #ffffff;
+      max-width: 200px;      /* Ensures image doesn’t get too large */
     }
-
 
     .sidebar a {
       text-decoration: none;
       color: #ffffff;
       margin: 30px 0;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 1.2rem;
+      text-align: center;
     }
 
     .sidebar a:hover {
       text-decoration: underline;
     }
 
+    /* MAIN CONTENT */
     .content {
-      margin-left: 220px;
+      margin-left: 220px;    /* Offset for the sidebar on desktop */
       padding: 30px;
       background: #FFFFFF;
       min-height: 100vh;
     }
 
+    /* HOMEPAGE HEADER / PROFILE */
     .header-title {
-     font-size: 40px;
+      font-size: 2rem;
       margin-bottom: 10px;
       text-align: center;
     }
 
     .subtitle {
       color: #003d2e;
-      font-size: 36px;
+      font-size: 1.8rem;
       margin-bottom: 20px;
       text-align: center;
     }
 
-      .profile-pic {
-      width: 16cm;
-      height: 12cm;
+    .profile-pic {
+      /* Instead of cm, use max-width for responsiveness */
+      width: 100%;
+      max-width: 600px;   /* large enough for desktop; will shrink on mobile */
+      height: auto;
       object-fit: cover;
       display: block;
       margin: 0 auto 20px auto;
@@ -88,282 +104,287 @@
       color: #003d2e;
     }
 
-    
     .clearfix::after {
       content: "";
       display: block;
       clear: both;
     }
 
+    /* ABOUT SECTION */
+    .about-section {
+      background-color: #f9f9f9;  
+      padding: 20px 30px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;         
+      margin-bottom: 40px;  
+    }
+    .about-section h2 {
+      font-size: 2rem;
+      color: #003d2e;                
+      text-align: center;            
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd; 
+      padding-bottom: 10px; 
+    }
+    .about-section p {
+      color: #333333; 
+      font-size: 1.5rem; 
+      line-height: 1.6; 
+    }
+    .about-section ul {
+      font-size: 1.5rem;
+      margin-top: 20px; 
+      padding-left: 20px; 
+    }
+    .about-section ul li {
+      font-size: 1.5rem;
+      color: #555555; 
+      margin-bottom: 10px; 
+    }
+    .about-section ul li strong {
+      color: #003d2e; 
+      font-size: 1.5rem;
+    }
 
-.about-section {
-  background-color: #f9f9f9;  
-  padding: 20px 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;         
-  margin-bottom: 40px;  
-}
+    /* EDUCATION SECTION */
+    .education-section {
+      background-color: #f9f9f9;  
+      padding: 20px 30px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;         
+      margin-bottom: 40px;  
+    }
+    .education-section h2 {
+      font-size: 2rem;
+      color: #003d2e;                
+      text-align: center;            
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd; 
+      padding-bottom: 10px; 
+    }
+    .education-section ul {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      padding-left: 20px; 
+      list-style-type: square; 
+    }
+    .education-section ul li {
+      font-size: 1.5rem; 
+      line-height: 1.8; 
+      color: #333333; 
+      margin-bottom: 10px; 
+    }
+    .education-section ul li strong {
+      font-size: 1.5rem;
+      color: #003d2e; 
+      font-weight: bold; 
+    }
 
-.about-section h2 {
-    font-size: 2rem;
-  color: #003d2e;                
-  text-align: center;            
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd; 
-  padding-bottom: 10px; 
-}
+    /* EXPERIENCE SECTION */
+    .experience-section {
+      background-color: #f9f9f9;  
+      padding: 20px 30px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;         
+      margin-bottom: 40px;      
+    }
+    .experience-section h2 {
+      font-size: 2rem;
+      color: #003d2e;            
+      text-align: center;         
+      margin-bottom: 25px;       
+      border-bottom: 1px solid #ddd; 
+      padding-bottom: 10px;       
+    }
+    .job {
+      margin-bottom: 30px;       
+    }
+    .job h3 {
+      font-size: 1.5rem;
+      color: #444;               
+      margin-bottom: 5px;
+      display: flex;             
+      flex-wrap: wrap;            
+      align-items: center;
+      gap: 8px;                   
+    }
+    .job-dates {
+      font-size: 1.3rem;
+      color: #666;
+      font-style: italic;       
+    }
+    .job h4 {
+      font-size: 1.4rem;
+      margin: 10px 0 8px 0;
+      color: #003d2e;            
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .job ul {
+      margin-left: 20px;          
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    .job ul li {
+      margin-bottom: 10px;        
+      line-height: 1.6;           
+      font-size: 1.3rem;           
+      color: #333;
+    }
 
-.about-section p {
-  color: #333333; 
-  font-size: 1.5rem; 
-  line-height: 1.6; 
-}
+    /* RESEARCH SECTION */
+    .research-section {
+      background-color: #f9f9f9;  
+      padding: 20px 30px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;         
+      margin-bottom: 40px;  
+    }
+    .research-section h2 {
+      font-size: 2rem;
+      color: #003d2e;                
+      text-align: center;            
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd; 
+      padding-bottom: 10px;
+    }
+    .research-section h3 {
+      font-size: 1.5rem;
+      color: #003d2e;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+    .research-section p {
+      color: #333333; 
+      font-size: 1.5rem; 
+      line-height: 1.6;
+    }
+    .research-section li {
+      color: #333333; 
+      font-size: 1.5rem; 
+      line-height: 1.6;
+    }
+    .publication-list {
+      margin: 0;           
+      padding-left: 30px;  
+      list-style-type: disc; 
+    }
+    .publication-list li {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .publication-list em {
+      font-style: italic;
+      color: #555;
+    }
+    .research-section p i {
+      color: #003d2e; 
+      margin-right: 5px; 
+      font-size: 1.5rem;
+    }
+    .research-section a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .research-section a:hover {
+      text-decoration: underline;
+    }
 
-.about-section ul {
-  font-size: 1.5rem;
-  margin-top: 20px; 
-  padding-left: 20px; 
-}
+    /* CONTACT SECTION */
+    .contact-section {
+      background-color: #f9f9f9;  
+      padding: 20px 30px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;         
+      margin-bottom: 40px;            
+    }
+    .contact-section h2 {
+      font-size: 2rem;
+      color: #003d2e;                
+      text-align: center;            
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd; 
+      padding-bottom: 10px;
+    }
+    .contact-section p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 25px;
+      font-size: 1.5rem;
+    }
+    .contact-list {
+      list-style: none;              
+      padding: 0;
+      max-width: 600px;             
+      margin: 0 auto;               
+    }
+    .contact-list li {
+      display: flex;               
+      align-items: center;
+      font-size: 1.5rem;            
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .contact-list li i {
+      color: #003d2e;               
+      margin-right: 10px;           
+      font-size: 1.5rem;            
+    }
+    .contact-list li strong {
+      margin-right: 5px;
+    }
+    .contact-list li a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .contact-list li a:hover {
+      text-decoration: underline;
+    }
 
-.about-section ul li {
-  font-size: 1.5rem;
-  color: #555555; 
-  margin-bottom: 10px; 
-}
+    /* ============= MEDIA QUERY FOR MOBILE SCREENS ============= */
+    @media (max-width: 768px) {
+      /* Sidebar becomes full-width on small screens */
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;  /* or column, but row may allow horizontal scroll if too many items */
+        justify-content: space-around;
+        padding: 10px 0;
+      }
+      .sidebar img {
+        display: none;  /* optional: hide the large image on mobile */
+      }
+      .sidebar a {
+        margin: 0 5px;
+        font-size: 1rem;
+      }
 
-.about-section ul li strong {
-  color: #003d2e; 
-  font-size: 1.5rem;
-}
-    
-.education-section {
-  background-color: #f9f9f9;  
-  padding: 20px 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;         
-  margin-bottom: 40px;  
-}
+      /* Content stacks below the sidebar */
+      .content {
+        margin-left: 0;
+        margin-top: 10px;
+      }
 
-.education-section h2 {
-    font-size: 2rem;
-  color: #003d2e;                
-  text-align: center;            
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd; 
-  padding-bottom: 10px; 
-}
-
-.education-section ul {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  padding-left: 20px; 
-  list-style-type: square; 
-}
-
-.education-section ul li {
-  font-size: 1.5rem; 
-  line-height: 1.8; 
-  color: #333333; 
-  margin-bottom: 10px; 
-}
-
-.education-section ul li strong {
-  font-size: 1.5rem;
-  color: #003d2e; 
-  font-weight: bold; 
-}
-
-.experience-section {
-  background-color: #f9f9f9;  
-  padding: 20px 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;         
-  margin-bottom: 40px;      
-}
-
-.experience-section h2 {
-  font-size: 2rem;
-  color: #003d2e;            
-  text-align: center;         
-  margin-bottom: 25px;       
-  border-bottom: 1px solid #ddd; 
-  padding-bottom: 10px;       
-}
-
-.job {
-  margin-bottom: 30px;       
-}
-
-.job h3 {
-  font-size: 1.5rem;
-  color: #444;               
-  margin-bottom: 5px;
-  display: flex;             
-  flex-wrap: wrap;            
-  align-items: center;
-  gap: 8px;                   
-}
-
-.job-dates {
-  font-size: 1.3rem;
-  color: #666;
-  font-style: italic;       
-}
-
-.job h4 {
-  font-size: 1.4rem;
-  margin: 10px 0 8px 0;
-  color: #003d2e;            
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.job ul {
-  margin-left: 20px;          
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-}
-
-.job ul li {
-  margin-bottom: 10px;        
-  line-height: 1.6;           
-  font-size: 1.3rem;           
-  color: #333;
-}
-    
-.research-section {
-  background-color: #f9f9f9;  
-  padding: 20px 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;         
-  margin-bottom: 40px;  
-}
-
-.research-section h2 {
-  font-size: 2rem;
-  color: #003d2e;                
-  text-align: center;            
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd; 
-  padding-bottom: 10px;
-}
-
-.research-section h3 {
-  font-size: 1.5rem;
-  color: #003d2e;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  text-decoration: underline;
-}
-
-.research-section p {
-  color: #333333; 
-  font-size: 1.5rem; 
-  line-height: 1.6;
-}
-    
-.research-section li {
-  color: #333333; 
-  font-size: 1.5rem; 
-  line-height: 1.6;
-}
-.publication-list {
-  margin: 0;           
-  padding-left: 30px;  
-  list-style-type: disc; 
-}
-
-.publication-list li {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.publication-list em {
-  font-style: italic;
-  color: #555;
-}
-
-.research-section p i {
-  color: #003d2e; 
-  margin-right: 5px; 
-  font-size: 1.5rem;
-}
-
-.research-section a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.research-section a:hover {
-  text-decoration: underline;
-}
-
-
-.contact-section {
-  background-color: #f9f9f9;  
-  padding: 20px 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;         
-  margin-bottom: 40px;            
-}
-
-.contact-section h2 {
-  font-size: 2rem;
-  color: #003d2e;                
-  text-align: center;            
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd; 
-  padding-bottom: 10px;
-}
-
-.contact-section p {
-  text-align: center;
-  color: #555;
-  margin-bottom: 25px;
-  font-size: 1.5rem;
-}
-
-.contact-list {
-  list-style: none;              
-  padding: 0;
-  max-width: 600px;             
-  margin: 0 auto;               
-}
-
-.contact-list li {
-  display: flex;               
-  align-items: center;
-  font-size: 1.5rem;;            
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.contact-list li i {
-  color: #003d2e;               
-  margin-right: 10px;           
-  font-size: 1.5rem;            
-}
-
-.contact-list li strong {
-  margin-right: 5px;
-}
-
-.contact-list li a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.contact-list li a:hover {
-  text-decoration: underline;
-}
-
+      /* Adjust heading sizes */
+      .header-title {
+        font-size: 1.8rem;
+      }
+      .subtitle {
+        font-size: 1.2rem;
+      }
+      /* Restrict the profile image size on mobile */
+      .profile-pic {
+        max-width: 100%;
+      }
+    }
   </style>
 
-  
 </head>
 <body>
   
@@ -389,207 +410,178 @@
       </p>
     </section>
 
-<section id="about" class="about-section">
-  <h2>About</h2>
-  <p>
-    With over 15 years in the industry, I’m passionate about using technology to spark innovation and boost efficiency. 
-    I hold dual master’s degrees in Computer Science from Bowling Green State University and Electrical Engineering with a focus on Telecommunications. 
-    Throughout my career, I've enjoyed tackling complex challenges and driving innovation through cutting-edge research and the latest technologies.
-  </p>
+    <section id="about" class="about-section">
+      <h2>About</h2>
+      <p>
+        With over 15 years in the industry, I’m passionate about using technology to spark innovation and boost efficiency. 
+        I hold dual master’s degrees in Computer Science from Bowling Green State University and Electrical Engineering with a focus on Telecommunications. 
+        Throughout my career, I've enjoyed tackling complex challenges and driving innovation through cutting-edge research and the latest technologies.
+      </p>
 
-  <h3>What I Do:</h3>
-  <ul>
-    <li>
-      <strong>Cellular Network Technologies:</strong> 5G NR, O-RAN, LTE, UMTS, and GSM networks.
-    </li>
-    <li>
-      <strong>Machine Learning and AI:</strong> Deep Learning, Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Multi-Modal Transformers.
-    </li>
-    <li>
-      <strong>Data Analysis & Visualization:</strong> SQL, NoSQL databases, JavaScript (D3.js), and HTML/CSS.
-    </li>
-    <li>
-      <strong>Software Engineering, Cloud Computing, and Computer Networking:</strong> Network Functions Virtualization (NFV), Software-Defined Networking (SDN) and IP Backbone networking.
-    </li>
-  </ul>
+      <h3>What I Do:</h3>
+      <ul>
+        <li><strong>Cellular Network Technologies:</strong> 5G NR, O-RAN, LTE, UMTS, and GSM networks.</li>
+        <li><strong>Machine Learning and AI:</strong> Deep Learning, Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Multi-Modal Transformers.</li>
+        <li><strong>Data Analysis & Visualization:</strong> SQL, NoSQL databases, JavaScript (D3.js), and HTML/CSS.</li>
+        <li><strong>Software Engineering, Cloud Computing, and Computer Networking:</strong> Network Functions Virtualization (NFV), Software-Defined Networking (SDN) and IP Backbone networking.</li>
+      </ul>
 
-  <p>
-    I’m passionate about connecting with forward-thinking organizations and like-minded professionals to transform bold ideas into meaningful innovations. 
-    I believe in the power of collaboration and continuous learning to drive technology forward. Whether it’s building cutting-edge solutions or 
-    reimagining user experiences, I’m eager to team up and make a lasting impact.
-  </p>
-  <p><strong>Let’s innovate together and shape the future of technology!</strong></p>
-</section>
+      <p>
+        I’m passionate about connecting with forward-thinking organizations and like-minded professionals to transform bold ideas into meaningful innovations. 
+        I believe in the power of collaboration and continuous learning to drive technology forward. Whether it’s building cutting-edge solutions or 
+        reimagining user experiences, I’m eager to team up and make a lasting impact.
+      </p>
+      <p><strong>Let’s innovate together and shape the future of technology!</strong></p>
+    </section>
 
-   <section id="experience" class="experience-section">
-  <h2>Experience</h2>
-  
-  <div class="job">
-    <h3>
-      Bowling Green State University, Ohio 
-      <span class="job-dates">Jul. 2024 - Dec. 2024</span>
-    </h3>
-    <h4>Graduate Teaching Assistant in the School of Engineering and Department of Computer Science</h4>
-    <ul>
-      <li>Mentored students in electrical and computer engineering fundamentals through hands-on labs.</li>
-      <li>Researched advancements in LLMs, Deep Learning Transformers, and Generative AI applications.</li>
-    </ul>
-  </div>
+    <section id="experience" class="experience-section">
+      <h2>Experience</h2>
+      
+      <div class="job">
+        <h3>
+          Bowling Green State University, Ohio 
+          <span class="job-dates">Jul. 2024 - Dec. 2024</span>
+        </h3>
+        <h4>Graduate Teaching Assistant in the School of Engineering and Department of Computer Science</h4>
+        <ul>
+          <li>Mentored students in electrical and computer engineering fundamentals through hands-on labs.</li>
+          <li>Researched advancements in LLMs, Deep Learning Transformers, and Generative AI applications.</li>
+        </ul>
+      </div>
 
-  <div class="job">
-    <h3>
-      MCI (Major cellular network operator supporting 105 million subscribers)
-      <span class="job-dates">Nov. 2007 - Aug. 2023</span>
-    </h3>
+      <div class="job">
+        <h3>
+          MCI (Major cellular network operator supporting 105 million subscribers)
+          <span class="job-dates">Nov. 2007 - Aug. 2023</span>
+        </h3>
 
-    <h4>
-      Senior Network Engineer 
-      <span class="job-dates">Apr. 2010 - Aug. 2023</span>
-    </h4>
-    <ul>
-      <li>Directed end-to-end operations for nationwide networks spanning 2G to 5G technologies, ensuring high standards in quality assurance and providing robust support to Optimization, Performance, Planning, and NOC teams, along with expert troubleshooting and fault management nationwide.</li>
-      <li>Managed vendor relationships and oversaw the hardware/software lifecycle, including compatibility, licensing, and End-of-Support management across 5G, LTE, UMTS, and GSM networks, maintaining adherence to SLAs.</li>
-      <li>Executed comprehensive hardware and software upgrades across Nokia and Ericsson nodes, enhancing network reliability and achieving $3M in cost savings.</li>
-      <li>Led commissioning, integration, and rehoming of Nokia and Ericsson gNB, eNB, and RNC nodes across packet cores, configuring Cisco, Juniper, and Ethernet switches, achieving $0.7M in savings and ensuring seamless IP backbone connectivity.</li>
-      <li>Optimized network performance using machine learning and database management, enhancing customer satisfaction.</li>
-    </ul>
+        <h4>
+          Senior Network Engineer 
+          <span class="job-dates">Apr. 2010 - Aug. 2023</span>
+        </h4>
+        <ul>
+          <li>Directed end-to-end operations for nationwide networks spanning 2G to 5G technologies, ensuring high standards in quality assurance and providing robust support to Optimization, Performance, Planning, and NOC teams, along with expert troubleshooting and fault management nationwide.</li>
+          <li>Managed vendor relationships and oversaw the hardware/software lifecycle, including compatibility, licensing, and End-of-Support management across 5G, LTE, UMTS, and GSM networks, maintaining adherence to SLAs.</li>
+          <li>Executed comprehensive hardware and software upgrades across Nokia and Ericsson nodes, enhancing network reliability and achieving $3M in cost savings.</li>
+          <li>Led commissioning, integration, and rehoming of Nokia and Ericsson gNB, eNB, and RNC nodes across packet cores, configuring Cisco, Juniper, and Ethernet switches, achieving $0.7M in savings and ensuring seamless IP backbone connectivity.</li>
+          <li>Optimized network performance using machine learning and database management, enhancing customer satisfaction.</li>
+        </ul>
 
-    <h4>
-      Radio Access Network (RAN) Engineer 
-      <span class="job-dates">Nov. 2007 - Apr. 2010</span>
-    </h4>
-    <ul>
-      <li>Boosted network performance and capacity by executing comprehensive parameter audits and optimizing RF parameters across multiple technologies, aligning configurations with industry standards to maximize overall efficiency.</li>
-      <li>Enhanced network quality and minimized downtime by resolving radio access issues, optimizing neighbor definitions, and planning frequency refarming.</li>
-      <li>Achieved $0.5M in cost savings through effective troubleshooting and upgrades of Nokia BSC2i, BSC3i, Flexi BSC, and BTS nodes, including implementing advanced Ethernet switch configurations.</li>
-    </ul>
-  </div>
-</section>
-    
-<section id="education" class="education-section">
+        <h4>
+          Radio Access Network (RAN) Engineer 
+          <span class="job-dates">Nov. 2007 - Apr. 2010</span>
+        </h4>
+        <ul>
+          <li>Boosted network performance and capacity by executing comprehensive parameter audits and optimizing RF parameters across multiple technologies, aligning configurations with industry standards to maximize overall efficiency.</li>
+          <li>Enhanced network quality and minimized downtime by resolving radio access issues, optimizing neighbor definitions, and planning frequency refarming.</li>
+          <li>Achieved $0.5M in cost savings through effective troubleshooting and upgrades of Nokia BSC2i, BSC3i, Flexi BSC, and BTS nodes, including implementing advanced Ethernet switch configurations.</li>
+        </ul>
+      </div>
+    </section>
+        
+    <section id="education" class="education-section">
       <h2>Education</h2>
       <ul>
-        <li>M.Sc.. in Computer Science, Bowling Green State University, Ohio, US</li>
+        <li>M.Sc. in Computer Science, Bowling Green State University, Ohio, US</li>
         <li>Emerging Technologies in Telco Networks (ETTN-260 hours), University of Tehran</li>
         <li>M.Sc. in Electrical Engineering (Telecommunications), Azad University</li>
         <li>B.Sc. in Computer Science, Azad University, Azad University</li>
       </ul>
     </section>
 
-<!-- Make sure Font Awesome is linked in your <head> -->
-<link 
-  rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-  integrity="sha512-..." 
-  crossorigin="anonymous" 
-  referrerpolicy="no-referrer"
-/>
+    <!-- Font Awesome (already included above) -->
+    <section id="research" class="research-section">
+      <h2>Research</h2>
+      <p>
+        <li><strong>Cellular Networks Technologies:</strong> 6G, 5G, O-RAN, LTE </li>
+        <li><strong>Machine Learning and AI:</strong> Deep Learning, Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Multi-Modal Transformers </li>
+        <li><strong>Data Science</strong></li>
+        <li><strong>Software Engineering, Cloud Computing, and Computer Networking</strong></li>
+      </p>
 
-<section id="research" class="research-section">
-  <h2>Research</h2>
-  <p>
-    <li> <strong>Cellular Networks Technologies:</strong> 6G, 5G, O-RAN, LTE </li>
-    <li> <strong>Machine Learning and AI:</strong> Deep Learning, Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Multi-Modal Transformers </li>
-    <li> <strong>Data Science</strong> </li>
-    <li> <strong>Software Engineering, Cloud Computing, and Computer Networking</strong> </li>
-  </p>
+      <h3>Publications</h3>
+      <ul class="publication-list">
+        <li>
+          Yadollahi, M. 
+          “Reducing processing delay and ping pong impact of multi attribute decision making handover for heterogeneous wireless networks” 
+          <em>2015 12th International Conference on Telecommunication in Modern Satellite, Cable and Broadcasting Services (TELSIKS)</em>, 
+          Nis, Serbia, 2015, pp. 365-368, 
+          <strong>doi:10.1109/TELSKS.2015.7357809</strong>. 
+          Citations: 8
+        </li>
+        <li>
+          Yadollahi, M. 
+          “Addressing Small and Imbalanced Medical Image Datasets Using Generative Models: A Comparative Study of DDPM and PGGANs with 
+          Random and Greedy K Sampling.” arXiv preprint arXiv:2412.12532 (2024).
+        </li>
+        <li>
+          Yadollahi, M. (2025). 
+          “Leveraged advanced Code-LMs (LLMs), particularly RAG, to automate commit messaging in GitHub, 
+          enhancing version control documentation accuracy and efficiency” [Under Review].
+        </li>
+      </ul>
 
-  <h3>Publications</h3>
-  <ul class="publication-list">
-    <li>
-      Yadollahi, M. 
-      “Reducing processing delay and ping pong impact of multi attribute decision making handover for heterogeneous wireless networks” 
-      <em>2015 12th International Conference on Telecommunication in Modern Satellite, Cable and Broadcasting Services (TELSIKS)</em>, 
-      Nis, Serbia, 2015, pp. 365-368, 
-      <strong>doi:10.1109/TELSKS.2015.7357809</strong>. 
-      Citations: 8
-    </li>
-    <li>
-      Yadollahi, M. 
-      “Addressing Small and Imbalanced Medical Image Datasets Using Generative Models: A Comparative Study of DDPM and PGGANs with 
-      Random and Greedy K Sampling.” arXiv preprint arXiv:2412.12532 (2024)</strong>.
-    </li>
-    <li>
-      Yadollahi, M. (2025). 
-      “Leveraged advanced Code-LMs (LLMs), particularly RAG, to automate commit messaging in GitHub, 
-      enhancing version control documentation accuracy and efficiency” [Under Review].
-    </li>
-  </ul>
+      <p>
+        <i class="fas fa-user-graduate"></i>
+        For more publications and citation details, please visit 
+        <a
+          href="https://scholar.google.com/citations?hl=en&authuser=1&user=KZy-cVMAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          my Google Scholar page
+        </a>.
+      </p>
+    </section>
+    
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <p>If you’d like to get in touch, feel free to reach me through any of the channels below.</p>
+      <ul class="contact-list">
+        <li>
+          <i class="fas fa-envelope"></i> 
+          <strong>Email:</strong>
+          <a href="mailto:mehrdad.yd23@gmail.com">mehrdad.yd23@gmail.com</a>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i> 
+          <strong>Email:</strong>
+          <a href="mailto:mehrday@bgsu.edu">mehrday@bgsu.edu</a>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i> 
+          <strong>Phone:</strong> 
+          +1 (713) 474-7642
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt"></i> 
+          <strong>Address:</strong> 
+          Ohio, US
+        </li>
+        <li>
+          <i class="fab fa-linkedin"></i> 
+          <strong>LinkedIn:</strong> 
+          <a href="https://www.linkedin.com/in/mehrdad-yadollahi/" target="_blank" rel="noopener noreferrer">
+            My Linkedin
+          </a>
+        </li>
+        <li>
+          <i class="fab fa-github"></i> 
+          <strong>GitHub:</strong> 
+          <a href="https://github.com/mehrdad-yadollahi" target="_blank" rel="noopener noreferrer">
+            My GitHub
+          </a>
+        </li>
+        <li>
+          <i class="fab fa-gitlab"></i> 
+          <strong>GitLab:</strong> 
+          <a href="https://gitlab.com/mehrdad-yadollahi" target="_blank" rel="noopener noreferrer">
+            My GitLab
+          </a>
+        </li>
+      </ul>
+    </section>
 
-  <p>
-    <i class="fas fa-user-graduate"></i>
-    For more publications and citation details, please visit 
-    <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=KZy-cVMAAAAJ" 
-       target="_blank" 
-       rel="noopener noreferrer"
-    >
-      my Google Scholar page
-    </a>.
-  </p>
-</section>
-
-    <link 
-  rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-  integrity="sha512-..." 
-  crossorigin="anonymous" 
-  referrerpolicy="no-referrer"
-/>
-    
-<section id="contact" class="contact-section">
-  <h2>Contact</h2>
-  <p>If you’d like to get in touch, feel free to reach me through any of the channels below.</p>
-  <ul class="contact-list">
-    
-    <li>
-      <i class="fas fa-envelope"></i> 
-      <strong>Email:</strong> 
-      <a href="mailto:mehrdad.yd23@gmail.com">mehrdad.yd23@gmail.com</a>
-      </li>
-      <li>
-      <i class="fas fa-envelope"></i> 
-      <strong>Email:</strong>
-       <a href="mailto:mehrday@bgsu.edu">mehrday@bgsu.edu</a>
-    </li>
-    
-    <li>
-      <i class="fas fa-phone"></i> 
-      <strong>Phone:</strong> 
-      +1 (713) 474-7642
-    </li>
-    
-    <li>
-      <i class="fas fa-map-marker-alt"></i> 
-      <strong>Address:</strong> 
-      Ohio, US
-    </li>
-    
-    <li>
-      <i class="fab fa-linkedin"></i> 
-      <strong>LinkedIn:</strong> 
-      <a href="https://www.linkedin.com/in/mehrdad-yadollahi/" target="_blank" rel="noopener noreferrer">
-        My Linkedin
-      </a>
-    </li>
-    
-    <li>
-      <i class="fab fa-github"></i> 
-      <strong>GitHub:</strong> 
-      <a href="https://github.com/mehrdad-yadollahi" target="_blank" rel="noopener noreferrer">
-        My GitHub
-      </a>
-    </li>
-    
-    <li>
-      <i class="fab fa-gitlab"></i> 
-      <strong>GitLab:</strong> 
-      <a href="https://gitlab.com/mehrdad-yadollahi" target="_blank" rel="noopener noreferrer">
-        My GitLab
-      </a>
-    </li>
-  </ul>
-</section>
-
-  </div>
+  </div> <!-- .content -->
 </body>
 </html>
