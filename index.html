@@ -229,7 +229,7 @@
   font-size: 1.3rem;           
   color: #333;
 }
-
+    
 .research-section {
   background-color: #f9f9f9;
   padding: 20px 30px;
@@ -246,6 +246,7 @@
   border-bottom: 1px solid #ddd; 
   padding-bottom: 10px;
 }
+
 .research-section h3 {
   font-size: 1.8rem;
   color: #003d2e;
@@ -253,7 +254,9 @@
   margin-bottom: 15px;
   text-decoration: underline;
 }
-    research-section p {
+
+/* Paragraphs at 1.5rem */
+.research-section p {
   color: #333333; 
   font-size: 1.5rem; 
   line-height: 1.6;
@@ -272,32 +275,19 @@
   color: #333;
 }
 
-
 .publication-list em {
   font-style: italic;
   color: #555;
 }
 
-
-.research-section a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.research-section a:hover {
-  text-decoration: underline;
-}
-
-.publication-list em {
-  color: #555;
-}
-
+/* Icon in paragraph */
 .research-section p i {
-  color: #003d2e; /* or any color you like */
+  color: #003d2e; 
   margin-right: 5px; 
-  font-size: 1.2rem; 
+  font-size: 1.3rem; /* Slightly larger than base text */
 }
 
+/* Links */
 .research-section a {
   color: #0066cc;
   text-decoration: none;
@@ -306,6 +296,7 @@
 .research-section a:hover {
   text-decoration: underline;
 }
+
 
 .contact-section {
   background-color: #f9f9f9;      
@@ -480,6 +471,7 @@
       </ul>
     </section>
 
+<!-- Make sure Font Awesome is linked in your <head> -->
 <link 
   rel="stylesheet" 
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
@@ -487,8 +479,8 @@
   crossorigin="anonymous" 
   referrerpolicy="no-referrer"
 />
-    
-    <section id="research" class="research-section">
+
+<section id="research" class="research-section">
   <h2>Research</h2>
   <p>
     Briefly describe your primary research interests or ongoing projects here. 
@@ -507,19 +499,25 @@
     </li>
     <li>
       Yadollahi, M. (2024). 
-      “Addressing Small and Imbalanced Medical Image Datasets Using Generative Models: A Comparative Study of DDPM and PGGANs with Random and Greedy K Sampling” 
-      <strong></strong>.
+      “Addressing Small and Imbalanced Medical Image Datasets Using Generative Models: 
+      A Comparative Study of DDPM and PGGANs with Random and Greedy K Sampling” 
+      <strong>[Under Review]</strong>.
     </li>
     <li>
       Yadollahi, M. (2025). 
-      “Leveraged advanced Code-LMs (LLMs), particularly RAG, to automate commit messaging in GitHub, enhancing version control documentation accuracy and efficiency” 
+      “Leveraged advanced Code-LMs (LLMs), particularly RAG, to automate commit messaging in GitHub, 
+      enhancing version control documentation accuracy and efficiency” 
       <strong>[Under Review]</strong>.
     </li>
   </ul>
 
   <p>
+    <i class="fas fa-user-graduate"></i>
     For more publications and citation details, please visit 
-    <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=KZy-cVMAAAAJ" target="_blank" rel="noopener noreferrer">
+    <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=KZy-cVMAAAAJ" 
+       target="_blank" 
+       rel="noopener noreferrer"
+    >
       my Google Scholar page
     </a>.
   </p>
