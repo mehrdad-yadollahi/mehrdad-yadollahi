@@ -229,6 +229,62 @@
   font-size: 1rem;           
   color: #333;
 }
+/* Research Section Container */
+.research-section {
+  background-color: #ffffff; /* White background for contrast */
+  padding: 20px 30px;
+  border-radius: 8px;
+  margin-bottom: 40px; /* Space below section */
+}
+
+/* Section Title */
+.research-section h2 {
+  font-size: 2rem;
+  color: #003d2e;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; 
+  padding-bottom: 10px;
+}
+
+/* Subheading for Publications */
+.research-section h3 {
+  font-size: 1.6rem;
+  color: #003d2e;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+/* Publication List Styles */
+.publication-list {
+  margin: 0;           /* Remove default margin */
+  padding-left: 30px;  /* Indent the bullet points */
+  list-style-type: disc; /* Standard disc bullets */
+}
+
+.publication-list li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Emphasize certain elements (like titles) */
+.publication-list em {
+  font-style: italic;
+  color: #555;
+}
+
+/* Scholar Link */
+.research-section a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.research-section a:hover {
+  text-decoration: underline;
+}
 
 
   </style>
@@ -358,13 +414,45 @@
 
 
     <!-- Research Section -->
-    <section id="research">
-      <h2>Research</h2>
-      <p>
-        Discuss your primary research areas, publications, or ongoing projects. 
-        You can link to external resources or PDFs here.
-      </p>
-    </section>
+    <section id="research" class="research-section">
+  <h2>Research</h2>
+  <p>
+    Briefly describe your primary research interests or ongoing projects here. 
+    For example, discuss your work in network optimization, machine learning, or academic collaborations.
+  </p>
+
+  <!-- Publications -->
+  <h3>Publications</h3>
+  <ul class="publication-list">
+    <li>
+      Yadollahi, M. 
+      “Reducing processing delay and ping pong impact of multi attribute decision making handover for heterogeneous wireless networks” 
+      <em>2015 12th International Conference on Telecommunication in Modern Satellite, Cable and Broadcasting Services (TELSIKS)</em>, 
+      Nis, Serbia, 2015, pp. 365-368, 
+      <strong>doi:10.1109/TELSKS.2015.7357809</strong>. 
+      Citations: 8
+    </li>
+    <li>
+      Yadollahi, M. (2025). 
+      “Addressing Small and Imbalanced Medical Image Datasets Using Generative Models: A Comparative Study of DDPM and PGGANs with Random and Greedy K Sampling” 
+      <strong>[Under Review]</strong>.
+    </li>
+    <li>
+      Yadollahi, M. (2025). 
+      “Leveraged advanced Code-LMs (LLMs), particularly RAG, to automate commit messaging in GitHub, enhancing version control documentation accuracy and efficiency” 
+      <strong>[Under Review]</strong>.
+    </li>
+  </ul>
+
+  <!-- Link to Google Scholar -->
+  <p>
+    For more publications and citation details, please visit 
+    <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=KZy-cVMAAAAJ" target="_blank" rel="noopener noreferrer">
+      my Google Scholar page
+    </a>.
+  </p>
+</section>
+
     
     <section id="contact">
       <h2>Contact</h2>
